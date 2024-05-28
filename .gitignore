@@ -1,0 +1,23 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+
+.eslintcache
+dist/*
+build/dist/*
+LATEST-handler.zip
+handler/*
+build/*
+
+.env
+*.iml
+.idea/
+docker/*
+
+terraform/.terraform
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2020",
+    "lib": ["ES2020"],
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "types": ["node", "jest"],
+    "outDir": "./build/dist",
+    "rootDir": "./"
+  },
+  "ts-node": {
+    "files": true
+  },
+  "exclude": ["node_modules", "build"],
+  "include": ["src", "test"]
+}

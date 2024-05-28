@@ -1,0 +1,14 @@
+@startuml
+!include_many <C4/C4_Container>
+System_Boundary(ssa, "Super Simple Analytics") {
+    Container(admin, "Admin", "next JS", "Frontend app for viewing analytics data")
+    Container(lambda, "Lambda", "AWS Lambda", "checks data and stores in database")
+    Container(apiGateway, "API gateway", "AWS API Gateway", "routes API request to lambda functions")
+    ContainerDb(analyticsDB, "Analytics DB", "MySQL", "Stores page views per url")
+    Rel(apiGateway, lambda, API request)
+    Rel(lambda, analyticsDB, store analytics data)
+    Rel( admin, analyticsDB, retrieve data)
+}
+System_Ext(webApp, "Web application")
+Rel(webApp, apiGateway, http request, "{day: 2022/1/1/,pageURL: blog/post/10-ways-to-write-a-blog-post}")
+@enduml

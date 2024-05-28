@@ -1,0 +1,50 @@
+{
+  "name": "super-simple-analytics",
+  "version": "0.0.1",
+  "description": "An AWS lambda function that sends analytics data to AWS Dynamo DB",
+  "main": "src/index.js",
+  "engineStrict": true,
+  "engines": {
+    "npm": "8",
+    "node": "16"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "clean": "rm -rf dist/*",
+    "tsc-build": "tsc",
+    "build-db-tables": "ts-node scripts/dbSetup.ts",
+    "build-db-data": "ts-node scripts/importData.ts",
+    "watch": "tsc --watch",
+    "invoke-lambda": "ts-node scripts/runLocal.ts",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
+  },
+  "author": "t14",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mysql": "^2.15.21",
+    "aws-sdk": "^2.1185.0",
+    "dotenv": "^16.0.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/aws-lambda": "^8.10.92",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.25",
+    "@types/qs": "^6.9.7",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.15",
+    "ts-jest": "^28.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  }
+}

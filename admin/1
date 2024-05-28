@@ -1,0 +1,29 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1 localhost
+255.255.255.255 broadcasthost
+::1 localhost
+#0.0.0.0         topgear.com
+0.0.0.0         www.topgear.com
+127.0.0.1 local.topgear.com
+127.0.0.1 topgear.bbc.co.uk
+127.0.0.1 localhost.dev.bbc.co.uk
+127.0.0.1 localhost.bbc.com
+#### START DEVKINSTA entries
+127.0.0.1 tg-wordpress.local
+127.0.0.1 www.tg-wordpress.local
+::1 tg-wordpress.local
+::1 www.tg-wordpress.local
+127.0.0.1 blueytv.local
+127.0.0.1 www.blueytv.local
+::1 blueytv.local
+::1 www.blueytv.local
+127.0.0.1 heyduggee.local
+127.0.0.1 www.heyduggee.local
+::1 heyduggee.local
+::1 www.heyduggee.local
+#### END DEVKINSTA entries
